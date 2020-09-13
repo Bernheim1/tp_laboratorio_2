@@ -1,0 +1,6 @@
+C:\Users\Bernheim\source\repos\Bernheim.AgustinTPs\Entidades1\bin\Debug\Entidades1.dll
+C:\Users\Bernheim\source\repos\Bernheim.AgustinTPs\Entidades1\bin\Debug\Entidades1.pdb
+C:\Users\Bernheim\source\repos\Bernheim.AgustinTPs\Entidades1\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Bernheim\source\repos\Bernheim.AgustinTPs\Entidades1\obj\Debug\Entidades1.dll
+C:\Users\Bernheim\source\repos\Bernheim.AgustinTPs\Entidades1\obj\Debug\Entidades1.pdb
+C:\Users\Bernheim\source\repos\Bernheim.AgustinTPs\Entidades1\obj\Debug\Entidades.csprojAssemblyReference.cache
