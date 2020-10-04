@@ -19,10 +19,19 @@ namespace Entidades
         }
 
         #region Constructores
+        /// <summary>
+        /// Inicializa la lista de vehiculos de la clase Taller
+        /// </summary>
         private Taller()
         {
             this.vehiculos = new List<Vehiculo>();
         }
+
+        /// <summary>
+        /// Constructor parametrizado que pide un valor para espacioDisponible y llama al constructor sin parametros
+        /// Para inicializar la lista
+        /// </summary>
+        /// <param name="espacioDisponible"></param>
         public Taller(int espacioDisponible):this()
         {
             this.espacioDisponible = espacioDisponible;

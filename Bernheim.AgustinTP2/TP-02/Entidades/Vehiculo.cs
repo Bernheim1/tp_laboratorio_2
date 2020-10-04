@@ -23,17 +23,32 @@ namespace Entidades
         private string chasis;
         private ConsoleColor color;
 
+        #region Propiedades
+
         /// <summary>
         /// ReadOnly: Retornará el tamaño
         /// </summary>
         protected virtual ETamanio Tamanio { get; }
 
+        #endregion
+
+        #region Constructores
+        /// <summary>
+        /// Constructor parametrizado con todos los atributos de la clase Vehiculo
+        /// </summary>
+        /// <param name="chasis"></param>
+        /// <param name="marca"></param>
+        /// <param name="color"></param>
         protected Vehiculo(string chasis, EMarca marca, ConsoleColor color)
         {
             this.chasis = chasis;
             this.marca = marca;
             this.color = color;
         }
+
+        #endregion
+
+        #region Metodos
 
         /// <summary>
         /// Publica todos los datos del Vehiculo.
@@ -44,6 +59,10 @@ namespace Entidades
             return (string)this;
         }
 
+        /// <summary>
+        /// Retorna un string con la informacion del vehiculo al castear un objeto vehiculo a string de manera explicita
+        /// </summary>
+        /// <param name="p"></param>
         public static explicit operator string(Vehiculo p)
         {
             StringBuilder sb = new StringBuilder();
@@ -55,6 +74,10 @@ namespace Entidades
 
             return sb.ToString();
         }
+
+        #endregion
+
+        #region Sobrecargas
 
         /// <summary>
         /// Dos vehiculos son iguales si comparten el mismo chasis
@@ -83,6 +106,11 @@ namespace Entidades
             return !(v1.chasis == v2.chasis);
         }
 
+        /// <summary>
+        /// Sobrecarga de object.Equals para que compare por Vehiculo
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
             bool retorno = false;
@@ -95,10 +123,16 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Sobrecarga de object.GetHashCode para la clase Vehiculo
+        /// </summary>
+        /// <returns></returns>
         public override int GetHashCode()
         {
             return base.GetHashCode();
         }
+
+        #endregion
 
     }
 }

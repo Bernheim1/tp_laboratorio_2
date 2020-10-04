@@ -8,13 +8,18 @@ using System.Drawing;
 
 namespace Entidades
 {
+    /// <summary>
+    /// Clase publica Sedan que hereda de la clase Vehiculo
+    /// </summary>
     public class Sedan : Vehiculo
     {
         public enum ETipo { CuatroPuertas, CincoPuertas }
         private ETipo tipo;
 
+        #region Constructores
+
         /// <summary>
-        /// Por defecto, TIPO será Monovolumen
+        /// Por defecto, TIPO será CuatroPuertas
         /// </summary>
         /// <param name="marca"></param>
         /// <param name="chasis"></param>
@@ -25,11 +30,23 @@ namespace Entidades
             this.tipo = ETipo.CuatroPuertas;
         }
 
+        /// <summary>
+        /// Constructor parametrizado que pide el atributo tipo, y llama al otro constructor para 
+        /// inicializar todos los atributos
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
+        /// <param name="tipo"></param>
         public Sedan(EMarca marca, string chasis, ConsoleColor color, ETipo tipo)
             :this(marca, chasis,color)
         {
             this.tipo = tipo;
         }
+
+        #endregion
+
+        #region Propiedades
         /// <summary>
         /// Los automoviles son medianos
         /// </summary>
@@ -41,6 +58,14 @@ namespace Entidades
             }
         }
 
+        #endregion
+
+        #region Metodos
+
+        /// <summary>
+        /// Retorna un string con todos los atributos de un Sedan
+        /// </summary>
+        /// <returns></returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -54,5 +79,7 @@ namespace Entidades
 
             return sb.ToString();
         }
+
+        #endregion
     }
 }
