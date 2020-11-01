@@ -31,3 +31,13 @@ C:\Users\Bernheim\Desktop\TP-02-20200927T204250Z-001\TP-02\TP-02\obj\Debug\TP-02
 C:\Users\Bernheim\Desktop\TP-02-20200927T204250Z-001\TP-02\TP-02\obj\Debug\TP-02.csproj.CopyComplete
 C:\Users\Bernheim\Desktop\TP-02-20200927T204250Z-001\TP-02\TP-02\obj\Debug\TP-02.exe
 C:\Users\Bernheim\Desktop\TP-02-20200927T204250Z-001\TP-02\TP-02\obj\Debug\TP-02.pdb
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\TP-02\bin\Debug\TP-02.exe.config
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\TP-02\bin\Debug\TP-02.exe
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\TP-02\bin\Debug\TP-02.pdb
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\TP-02\bin\Debug\Entidades.dll
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\TP-02\bin\Debug\Entidades.pdb
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\TP-02\obj\Debug\TP-02.csprojAssemblyReference.cache
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\TP-02\obj\Debug\TP-02.csproj.CoreCompileInputs.cache
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\TP-02\obj\Debug\TP-02.csproj.CopyComplete
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\TP-02\obj\Debug\TP-02.exe
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\TP-02\obj\Debug\TP-02.pdb

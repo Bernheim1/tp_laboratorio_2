@@ -1,0 +1,9 @@
+C:\Users\Bernheim\source\repos\Bernheim.Agustin.2A.TP3\Clases Abstractas\bin\Debug\Clases Abstractas.dll
+C:\Users\Bernheim\source\repos\Bernheim.Agustin.2A.TP3\Clases Abstractas\bin\Debug\Clases Abstractas.pdb
+C:\Users\Bernheim\source\repos\Bernheim.Agustin.2A.TP3\Clases Abstractas\bin\Debug\Excepciones.dll
+C:\Users\Bernheim\source\repos\Bernheim.Agustin.2A.TP3\Clases Abstractas\bin\Debug\Excepciones.pdb
+C:\Users\Bernheim\source\repos\Bernheim.Agustin.2A.TP3\Clases Abstractas\obj\Debug\Clases Abstractas.csprojAssemblyReference.cache
+C:\Users\Bernheim\source\repos\Bernheim.Agustin.2A.TP3\Clases Abstractas\obj\Debug\Clases Abstractas.csproj.CoreCompileInputs.cache
+C:\Users\Bernheim\source\repos\Bernheim.Agustin.2A.TP3\Clases Abstractas\obj\Debug\Clases Abstractas.csproj.CopyComplete
+C:\Users\Bernheim\source\repos\Bernheim.Agustin.2A.TP3\Clases Abstractas\obj\Debug\Clases Abstractas.dll
+C:\Users\Bernheim\source\repos\Bernheim.Agustin.2A.TP3\Clases Abstractas\obj\Debug\Clases Abstractas.pdb

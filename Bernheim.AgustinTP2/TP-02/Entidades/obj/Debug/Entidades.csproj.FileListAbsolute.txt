@@ -17,3 +17,9 @@ C:\Users\Bernheim\Desktop\TP-02-20200927T204250Z-001\TP-02\Entidades\obj\Debug\E
 C:\Users\Bernheim\Desktop\TP-02-20200927T204250Z-001\TP-02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Bernheim\Desktop\TP-02-20200927T204250Z-001\TP-02\Entidades\obj\Debug\Entidades.dll
 C:\Users\Bernheim\Desktop\TP-02-20200927T204250Z-001\TP-02\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\Entidades\bin\Debug\Entidades.dll
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\Entidades\obj\Debug\Entidades.dll
+C:\Users\Bernheim\source\repos\tp_laboratorio_2\Bernheim.AgustinTP2\TP-02\Entidades\obj\Debug\Entidades.pdb
