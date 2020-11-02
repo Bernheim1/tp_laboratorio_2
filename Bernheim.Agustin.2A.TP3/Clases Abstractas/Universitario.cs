@@ -70,7 +70,7 @@ namespace EntidadesAbstractas
         /// <returns>True si legajo o DNI son iguales, caso contrario false</returns>
         public static bool operator ==(Universitario pg1, Universitario pg2)
         {
-            if(pg1.legajo == pg2.legajo || pg1.DNI == pg2.DNI)
+            if(pg1.GetType() == pg2.GetType() && pg1.legajo == pg2.legajo || pg1.DNI == pg2.DNI)
             {
                 return true;
             }
