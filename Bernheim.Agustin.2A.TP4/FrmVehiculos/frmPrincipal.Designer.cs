@@ -32,7 +32,7 @@
             this.dgv1 = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnVender = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnTicket = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtUltimoVendido = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
@@ -66,15 +66,15 @@
             this.btnVender.UseVisualStyleBackColor = true;
             this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
             // 
-            // btnActualizar
+            // btnTicket
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(295, 393);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(118, 45);
-            this.btnActualizar.TabIndex = 5;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.btnTicket.Location = new System.Drawing.Point(295, 393);
+            this.btnTicket.Name = "btnTicket";
+            this.btnTicket.Size = new System.Drawing.Size(118, 45);
+            this.btnTicket.TabIndex = 5;
+            this.btnTicket.Text = "Ticket";
+            this.btnTicket.UseVisualStyleBackColor = true;
+            this.btnTicket.Click += new System.EventHandler(this.btnTicket_Click);
             // 
             // btnGuardar
             // 
@@ -102,7 +102,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtUltimoVendido);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnTicket);
             this.Controls.Add(this.btnVender);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgv1);
@@ -124,7 +124,7 @@
         private System.Windows.Forms.DataGridView dgv1;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnVender;
-        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnTicket;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtUltimoVendido;
     }

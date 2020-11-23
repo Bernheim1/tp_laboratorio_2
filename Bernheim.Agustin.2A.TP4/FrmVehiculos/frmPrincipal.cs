@@ -27,7 +27,11 @@ namespace FrmVehiculos
         public event ultimoVendido UltimoVendido;
         public Thread hiloUltimoVendido;
 
-        public Vehiculos ultimoVendido;
+        private Vehiculos ultimoVendido;
+        private bool flag;
+        private bool flagTicket;
+        private StringBuilder sb;
+        private double precioTotal;
         #endregion
 
         #region Constructor
@@ -42,6 +46,8 @@ namespace FrmVehiculos
 
             this.cn = new SqlConnection(Properties.Settings.Default.conexionBD);
             this.da = new SqlDataAdapter();
+
+            this.sb = new StringBuilder();
 
             this.CrearDataTable();
             this.ConfigurarDataAdapter();
@@ -93,15 +99,16 @@ namespace FrmVehiculos
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private void btnTicket_Click(object sender, EventArgs e)
         {
-            if (!this.GuardarCambios())
+            if (!this.HacerTicket())
             {
-                MessageBox.Show("Error al ACTUALIZAR el vehiculo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al hacer el TICKET", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 MessageBox.Show("Los datos fueron actualizados", "ACTUALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.flagTicket = true;
             }
         }
 
@@ -131,14 +138,17 @@ namespace FrmVehiculos
         /// <param name="e"></param>
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("¿Está seguro de cerrar esta ventana? Perderá todos los datos si no presiona el boton Actualizar", "¿Seguro de cerrar?",
+            if(this.flag && !this.flagTicket)
+            {
+                DialogResult dialogResult = MessageBox.Show("¿Está seguro de cerrar esta ventana? Perderá todos los datos si no presiona el boton Ticket", "¿Seguro de cerrar?",
                                                         MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (dialogResult == DialogResult.No)
-            {
-                e.Cancel = true;
+                if (dialogResult == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
             }
-            else if(this.hiloUltimoVendido.IsAlive)
+            if(this.hiloUltimoVendido.IsAlive)
             {
                 this.hiloUltimoVendido.Abort();
             }
@@ -354,6 +364,8 @@ namespace FrmVehiculos
 
                     this.tabla.Rows.Add(fila);
 
+                   
+
                     switch (fv.Tipo)
                     {
                         case "Auto":
@@ -417,16 +429,14 @@ namespace FrmVehiculos
                         break;
                 }
 
-                fp = new frmVehiculo(aux);
+                MessageBox.Show("Se agregó el vehiculo al ticket", "Vehiculo vendido", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                if (fp.ShowDialog() == DialogResult.OK)
-                {
-                    this.tabla.Rows[indice].Delete();
-                    this.da.Update(tabla);
-                    this.tabla = (DataTable)this.dgv1.DataSource;
-                    this.concesionario -= aux;
-                    this.ultimoVendido = aux;
-                }
+                this.concesionario -= aux;
+                this.ultimoVendido = aux;
+                this.sb.AppendLine(this.ultimoVendido.ToString());
+                this.precioTotal += aux.Precio;
+
+                flag = true;
 
                 if (!this.hiloUltimoVendido.IsAlive)
                 {
@@ -443,24 +453,25 @@ namespace FrmVehiculos
         }
 
         /// <summary>
-        /// Guarda los cambios realizados en la grilla en la base de datos
+        /// Guarda en un archivo de texto el contenido del ticket creado en ejecucion
         /// </summary>
         /// <returns></returns>
-        public bool GuardarCambios()
+        public bool HacerTicket()
         {
-            bool res = true;
+            bool retorno = false;
 
-            try
+            Texto aux = new Texto();
+
+            this.sb.AppendFormat("\n\n\n=========== Fecha: {0} ==========\n", DateTime.Now);
+            this.sb.AppendFormat("=========== Precio total: {0} ===========", this.precioTotal);
+
+            if(aux.Guardar(Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + @"\Ticket.txt", this.sb.ToString()))
             {
-                this.da.Update(this.tabla);
-            }
-            catch (Exception e)
-            {
-                res = false;
-                Console.WriteLine(e.Message);
+                retorno = true;
+                this.flagTicket = true;
             }
 
-            return res;
+            return retorno;
         }
 
         /// <summary>
@@ -491,5 +502,7 @@ namespace FrmVehiculos
             this.hiloUltimoVendido.Start();
         }
         #endregion
+
+
     }
 }

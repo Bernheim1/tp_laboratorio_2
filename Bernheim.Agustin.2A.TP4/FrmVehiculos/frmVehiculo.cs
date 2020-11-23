@@ -95,6 +95,7 @@ namespace FrmVehiculos
                 }
                 else
                 {
+                    MessageBox.Show("Debe ingresar correctamente todos los campos!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     throw new Exception();
                 }
             }
